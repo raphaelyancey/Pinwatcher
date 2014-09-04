@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>fr.raphaelyancey.pinwatcher</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>sh</string>
+		<string>-c</string>
+		<string>php /path/to/pinwatcher.php</string> <!-- CHANGE HERE -->
+	</array>
+	<key>StartInterval</key>
+	<integer>10800</integer> <!-- 3h is default (for 2h use 7200 / 1h use 3600 / etc.)-->
+</dict>
+</plist>

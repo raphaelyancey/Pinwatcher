@@ -7,23 +7,45 @@ Pinwatcher is a little script that allows you to regularly backup Pinterest pict
 
 ### What does it do?
 
-Pinwatcher retrieve, **every 3 hours** (by default), the last **50 pins** of a Pinterest user's profile and save only new pins to the local drive.
+Pinwatcher retrieve, **every hours** (by default), the last **50 pins** of a Pinterest user's profile and save only new pins to the local drive.
 
 *****
 
 ### Requirements
-- command-line `php`
-- a job manager (`cron` for example, or `launchd` under OS X)
+- Command-line `php`
+- Job manager (`cron` for example, or `launchd` under OS X)
 
 *****
 
 ### Installation (OS X)
 
-A `.plist` file is included for loading into `launchd` (OS X job manager) and run Pinwatcher script every 3 hours.
+*(tested on OS X 10.9 only)*
 
-* Edit `pinwatcher.php` and specify the Pinterest username and the path where the pictures will be saved
-* Edit the `.plist` file and specify the path of `pinwatcher.php`.
-* Load the `.plist` into `launchd` by executing the following command: `launchctl load -w /path/to/fr.raphaelyancey.pinwatcher.plist`
-(enter the actual path to the `.plist` file)
+* Open your shell client (`Terminal.app` for example)
+*  Go to your freshly downloaded `Pinwatcher`directory
+> `cd /path/to/Pinwatcher`
 
-Now, Pinwatcher will check every 3 hours (by default) if new pictures have been pinned to the specified user's profile and save them!
+* Execute the installation script
+> `sh install.sh` 
+
+* You can now delete the folder if you wish, as Pinwatcher is installed in `~/Library/Application Support/Pinwatcher` 
+> `cd .. && rm -rf Pinwatcher/`
+
+**Pinwatcher will check every hour (by default) if new pictures have been pinned to the specified user's profile and save them!**
+
+*****
+
+### Installed files
+
+Every installed files are in the following directory
+> `~/Application Support/Pinwatcher`
+
+Symbolic links are created to
+> ` ~/Library/LaunchAgents/`
+> `~/Library/Logs/`
+
+ *****
+
+### TODO
+
+* Uninstall script

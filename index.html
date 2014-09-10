@@ -31,29 +31,78 @@
         <hr>
 
         <section id="main_content">
-<h3>
-<a name="what-does-it-do" class="anchor" href="#what-does-it-do"><span class="octicon octicon-link"></span></a>What does it do?</h3>
+        <h1 id="pinwatcher">Pinwatcher</h1>
 
-<p>Pinwatcher retrieve, <strong>every 3 hours</strong> (by default), the last <strong>50 pins</strong> of a Pinterest user's profile and save only new pins to the local drive.</p>
+        <p>Pinwatcher is a little script that allows you to regularly backup Pinterest pictures from a profile to your drive.</p>
 
-<hr><h3>
-<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h3>
+        <hr>
 
-<ul>
-<li>command-line <code>php</code>
-</li>
-<li>a job manager (<code>cron</code> for example, or <code>launchd</code> under OS X)</li>
-</ul><hr><h3>
-<a name="installation-os-x" class="anchor" href="#installation-os-x"><span class="octicon octicon-link"></span></a>Installation (OS X)</h3>
 
-<p>A <code>.plist</code> file is included for loading into <code>launchd</code> (OS X job manager) and run Pinwatcher script every 3 hours.</p>
 
-<ul>
-<li>Edit <code>pinwatcher.php</code> and specify the Pinterest username and the path where the pictures will be saved</li>
-<li>Edit the <code>.plist</code> file and specify the path of <code>pinwatcher.php</code>.</li>
-<li>Load the <code>.plist</code> into <code>launchd</code> by executing the following command: <code>launchctl load -w /path/to/fr.raphaelyancey.pinwatcher.plist</code>
-(enter the actual path to the <code>.plist</code> file)</li>
-</ul><p>Now, Pinwatcher will check every 3 hours (by default) if new pictures have been pinned to the specified user's profile and save them!</p>
+        <h3 id="what-does-it-do">What does it do?</h3>
+
+        <p>Pinwatcher retrieve, <strong>every hours</strong> (by default), the last <strong>50 pins</strong> of a Pinterest user’s profile and save only new pins to the local drive.</p>
+
+        <hr>
+
+        <h3 id="requirements">Requirements</h3>
+
+        <ul>
+        <li>Command-line <code>php</code></li>
+        <li>Job manager (<code>cron</code> for example, or <code>launchd</code> under OS X)</li>
+        </ul>
+
+        <hr>
+
+        <h3 id="installation-os-x">Installation (OS X)</h3>
+
+        <p><em>(tested on OS X 10.9 only)</em></p>
+
+        <ul>
+        <li>Open your shell client (<code>Terminal.app</code> for example)</li>
+        <li><p>Go to your freshly downloaded <code>Pinwatcher</code>directory</p>
+
+        <blockquote>
+          <p><code>cd /path/to/Pinwatcher</code></p>
+        </blockquote></li>
+        <li><p>Execute the installation script</p>
+
+        <blockquote>
+          <p><code>sh install.sh</code> </p>
+        </blockquote></li>
+        <li><p>You can now delete the folder if you wish, as Pinwatcher is installed in <code>~/Library/Application Support/Pinwatcher</code> </p>
+
+        <blockquote>
+          <p><code>cd .. &amp;&amp; rm -rf Pinwatcher/</code></p>
+        </blockquote></li>
+        </ul>
+
+        <p><strong>Pinwatcher will check every hour (by default) if new pictures have been pinned to the specified user’s profile and save them!</strong></p>
+
+        <hr>
+
+        <h3 id="installed-files">Installed files</h3>
+
+        <p>Every installed files are in the following directory</p>
+
+        <blockquote>
+          <p><code>~/Application Support/Pinwatcher</code></p>
+        </blockquote>
+
+        <p>Symbolic links are created to</p>
+
+        <blockquote>
+          <p><code>~/Library/LaunchAgents/</code> <br>
+          <code>~/Library/Logs/</code></p>
+        </blockquote>
+
+        <hr>
+
+        <h3 id="todo-1">TODO</h3>
+
+        <ul>
+        <li>Uninstall script</li>
+        </ul>
         </section>
 
         <footer>

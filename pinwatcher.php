@@ -2,7 +2,7 @@
 
 // -- CUSTOMIZE HERE --
 define('USER', 'raphaelyancey');
-define('PIN_PATH', '.');
+define('PIN_PATH', '/Users/[username]/Pictures/Pinwatcher');
 // --------------------
 
 $i = 0;
@@ -32,6 +32,17 @@ function filter_originals($value, $key)
 	}
 }
 
+if(!file_exists(PIN_PATH))
+{
+	echo '[+] Target pins directory doesn\'t exist, creating it... ';
+
+	if(mkdir(PIN_PATH)) echo 'done.';
+	else {
+		echo 'failure! Please check permissions.';
+		exit(1);
+	}
+}
+
 echo '[+] Fetching the last pins from '.USER.'\'s Pinterest profile...';
 $page = file_get_contents('https://api.pinterest.com/v3/pidgets/users/'.USER.'/pins/');
 echo 'done.'."\n";
@@ -47,4 +58,5 @@ else
 
 echo "\n";
 
+exit(0);
 ?>

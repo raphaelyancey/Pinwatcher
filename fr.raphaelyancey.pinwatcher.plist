@@ -8,9 +8,11 @@
 	<array>
 		<string>sh</string>
 		<string>-c</string>
-		<string>php /path/to/pinwatcher.php</string> <!-- CHANGE HERE -->
+		<string>php /Users/[username]/Library/Application\ Support/pinwatcher.php</string>
 	</array>
 	<key>StartInterval</key>
-	<integer>10800</integer> <!-- 3h is default (for 2h use 7200 / 1h use 3600 / etc.)-->
+	<integer>3600</integer> <!-- 1h is default -->
+	<key>StandardOutPath</key>
+	<string>/Users/[username]/Library/Application\ Support/Pinwatcher/Pinwatcher.log</string>
 </dict>
 </plist>

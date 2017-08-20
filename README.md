@@ -1,7 +1,7 @@
 Pinwatcher
 ==========
 
-##NOTE: installation script does not work as expected. Please install by filling your username in the `php` and `plist` files and manually loading the `plist` file with `launchctl -w file]`.
+## NOTE: installation script does not work as expected. Please install by filling your username in the `php` and `plist` files and manually loading the `plist` file with `launchctl -w file]`.
 
 Pinwatcher is a little script that allows you to regularly backup Pinterest pictures from a profile to your drive.
 
